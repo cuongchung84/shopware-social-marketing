@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Swag\SocialMarketing\Service\Clients;
 
@@ -40,7 +42,8 @@ class InstagramClient
                 ],
                 'body' => [
                     'image_url' => $productData['image_url'],
-                    'caption' => "{$productData['name']}\n\n{$productData['description']}\n\nPrice: {$productData['price']}\n\n{$productData['product_link']}",
+                    'caption' => "{$productData['name']}\n\n{$productData['description']}\n\n"
+                . "Price: {$productData['price']}\n\n{$productData['product_link']}",
                 ],
             ]);
 

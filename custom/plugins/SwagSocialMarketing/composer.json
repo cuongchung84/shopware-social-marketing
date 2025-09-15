@@ -28,5 +28,9 @@
         "allow-plugins": {
             "symfony/runtime": true
         }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "^4.0"
     }
 }

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Swag\SocialMarketing\Service\Clients;
 
@@ -40,8 +42,9 @@ class TikTokClient
                     'access_token' => $accessToken,
                 ],
                 'body' => [
-                    'video_url' => $productData['image_url'], // TikTok uses video_url, but we'll use the image_url for now
-                    'text' => "{$productData['name']}\n\n{$productData['description']}\n\nPrice: {$productData['price']}\n\n{$productData['product_link']}",
+                    'video_url' => $productData['image_url'],
+                'text' => "{$productData['name']}\n\n{$productData['description']}\n\nPrice: {$productData['price']}"
+                . "\n\n{$productData['product_link']}",
                 ],
             ]);
 

@@ -1,0 +1,10 @@
+﻿2025-09-15T13:38:19.3709737Z ##[group]Run vendor/bin/phpcs --standard=PSR12 src/
+2025-09-15T13:38:19.3710123Z [36;1mvendor/bin/phpcs --standard=PSR12 src/[0m
+2025-09-15T13:38:19.3739957Z shell: /usr/bin/bash -e {0}
+2025-09-15T13:38:19.3740190Z env:
+2025-09-15T13:38:19.3740365Z   COMPOSER_PROCESS_TIMEOUT: 0
+2025-09-15T13:38:19.3740603Z   COMPOSER_NO_INTERACTION: 1
+2025-09-15T13:38:19.3740812Z   COMPOSER_NO_AUDIT: 1
+2025-09-15T13:38:19.3741022Z ##[endgroup]
+2025-09-15T13:38:19.3791333Z /home/runner/work/_temp/3315df8a-fb75-4538-ac93-30e81511ce40.sh: line 1: vendor/bin/phpcs: No such file or directory
+2025-09-15T13:38:19.3803560Z ##[error]Process completed with exit code 127.

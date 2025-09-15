@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Swag\SocialMarketing\Service\Clients;
 
@@ -39,7 +41,8 @@ class FacebookClient
                     'access_token' => $accessToken,
                 ],
                 'body' => [
-                    'message' => "{$productData['name']}\n\n{$productData['description']}\n\nPrice: {$productData['price']}\n\n{$productData['product_link']}",
+                    'message' => "{$productData['name']}\n\n{$productData['description']}\n\n"
+                . "Price: {$productData['price']}\n\n{$productData['product_link']}",
                     'link' => $productData['product_link'],
                     'picture' => $productData['image_url'],
                 ],

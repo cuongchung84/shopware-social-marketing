@@ -1,0 +1,12 @@
+﻿2025-09-15T13:20:57.6293929Z ##[group]Run composer validate
+2025-09-15T13:20:57.6294342Z [36;1mcomposer validate[0m
+2025-09-15T13:20:57.6352362Z shell: /usr/bin/bash -e {0}
+2025-09-15T13:20:57.6352685Z env:
+2025-09-15T13:20:57.6352906Z   COMPOSER_PROCESS_TIMEOUT: 0
+2025-09-15T13:20:57.6353188Z   COMPOSER_NO_INTERACTION: 1
+2025-09-15T13:20:57.6353466Z   COMPOSER_NO_AUDIT: 1
+2025-09-15T13:20:57.6353695Z ##[endgroup]
+2025-09-15T13:20:57.8256496Z ./composer.json is valid, but with a few warnings
+2025-09-15T13:20:57.8257869Z See https://getcomposer.org/doc/04-schema.md for details on the schema
+2025-09-15T13:20:57.8259704Z # General warnings
+2025-09-15T13:20:57.8260394Z - The version field is present, it is recommended to leave it out if the package is published on Packagist.

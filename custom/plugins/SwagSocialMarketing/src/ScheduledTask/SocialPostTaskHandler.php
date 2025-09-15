@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Swag\SocialMarketing\ScheduledTask;
 
@@ -33,7 +35,10 @@ class SocialPostTaskHandler extends ScheduledTaskHandler
     {
         $this->logger->info('Running social post task.');
 
-        $products = $this->productRepository->search(new Criteria(), \Shopware\Core\Framework\Context::createDefaultContext());
+        $products = $this->productRepository->search(
+            new Criteria(),
+            \Shopware\Core\Framework\Context::createDefaultContext()
+        );
 
         foreach ($products->getIds() as $productId) {
             $this->socialPostService->postProduct($productId);

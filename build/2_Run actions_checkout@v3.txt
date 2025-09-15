@@ -1,0 +1,183 @@
+﻿2025-09-15T13:38:02.0238322Z ##[group]Run actions/checkout@v3
+2025-09-15T13:38:02.0239855Z with:
+2025-09-15T13:38:02.0240799Z   repository: cuongchung84/shopware-social-marketing
+2025-09-15T13:38:02.0242282Z   token: ***
+2025-09-15T13:38:02.0243053Z   ssh-strict: true
+2025-09-15T13:38:02.0243920Z   persist-credentials: true
+2025-09-15T13:38:02.0244841Z   clean: true
+2025-09-15T13:38:02.0245649Z   sparse-checkout-cone-mode: true
+2025-09-15T13:38:02.0246651Z   fetch-depth: 1
+2025-09-15T13:38:02.0247485Z   fetch-tags: false
+2025-09-15T13:38:02.0248275Z   lfs: false
+2025-09-15T13:38:02.0249196Z   submodules: false
+2025-09-15T13:38:02.0250058Z   set-safe-directory: true
+2025-09-15T13:38:02.0251238Z ##[endgroup]
+2025-09-15T13:38:02.1095344Z Syncing repository: cuongchung84/shopware-social-marketing
+2025-09-15T13:38:02.1098148Z ##[group]Getting Git version info
+2025-09-15T13:38:02.1100311Z Working directory is '/home/runner/work/shopware-social-marketing/shopware-social-marketing'
+2025-09-15T13:38:02.1102894Z [command]/usr/bin/git version
+2025-09-15T13:38:02.1159357Z git version 2.51.0
+2025-09-15T13:38:02.1186745Z ##[endgroup]
+2025-09-15T13:38:02.1200582Z Temporarily overriding HOME='/home/runner/work/_temp/f89c1489-00e4-4744-9fb1-ab25f47b61a2' before making global git config changes
+2025-09-15T13:38:02.1203701Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-15T13:38:02.1206397Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/shopware-social-marketing/shopware-social-marketing
+2025-09-15T13:38:02.1240304Z Deleting the contents of '/home/runner/work/shopware-social-marketing/shopware-social-marketing'
+2025-09-15T13:38:02.1244665Z ##[group]Initializing the repository
+2025-09-15T13:38:02.1247797Z [command]/usr/bin/git init /home/runner/work/shopware-social-marketing/shopware-social-marketing
+2025-09-15T13:38:02.1346280Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-15T13:38:02.1348455Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-15T13:38:02.1351623Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-15T13:38:02.1353997Z hint:
+2025-09-15T13:38:02.1355610Z hint: 	git config --global init.defaultBranch <name>
+2025-09-15T13:38:02.1357990Z hint:
+2025-09-15T13:38:02.1360275Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-15T13:38:02.1363478Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-15T13:38:02.1365854Z hint:
+2025-09-15T13:38:02.1366719Z hint: 	git branch -m <name>
+2025-09-15T13:38:02.1367580Z hint:
+2025-09-15T13:38:02.1368953Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-15T13:38:02.1372397Z Initialized empty Git repository in /home/runner/work/shopware-social-marketing/shopware-social-marketing/.git/
+2025-09-15T13:38:02.1377663Z [command]/usr/bin/git remote add origin https://github.com/cuongchung84/shopware-social-marketing
+2025-09-15T13:38:02.1398929Z ##[endgroup]
+2025-09-15T13:38:02.1401420Z ##[group]Disabling automatic garbage collection
+2025-09-15T13:38:02.1403634Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-15T13:38:02.1429349Z ##[endgroup]
+2025-09-15T13:38:02.1431630Z ##[group]Setting up auth
+2025-09-15T13:38:02.1434482Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-15T13:38:02.1463579Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-15T13:38:02.1783797Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-15T13:38:02.1812600Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-15T13:38:02.2029591Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-15T13:38:02.2061394Z ##[endgroup]
+2025-09-15T13:38:02.2062756Z ##[group]Fetching the repository
+2025-09-15T13:38:02.2069968Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +d891a6ae2c83512d197ea3324dd3f5a899dcc058:refs/remotes/origin/main
+2025-09-15T13:38:02.7205535Z remote: Enumerating objects: 63, done.        
+2025-09-15T13:38:02.7207498Z remote: Counting objects:   1% (1/63)        
+2025-09-15T13:38:02.7209064Z remote: Counting objects:   3% (2/63)        
+2025-09-15T13:38:02.7210331Z remote: Counting objects:   4% (3/63)        
+2025-09-15T13:38:02.7211580Z remote: Counting objects:   6% (4/63)        
+2025-09-15T13:38:02.7212832Z remote: Counting objects:   7% (5/63)        
+2025-09-15T13:38:02.7214334Z remote: Counting objects:   9% (6/63)        
+2025-09-15T13:38:02.7216074Z remote: Counting objects:  11% (7/63)        
+2025-09-15T13:38:02.7217443Z remote: Counting objects:  12% (8/63)        
+2025-09-15T13:38:02.7218832Z remote: Counting objects:  14% (9/63)        
+2025-09-15T13:38:02.7219967Z remote: Counting objects:  15% (10/63)        
+2025-09-15T13:38:02.7221113Z remote: Counting objects:  17% (11/63)        
+2025-09-15T13:38:02.7222258Z remote: Counting objects:  19% (12/63)        
+2025-09-15T13:38:02.7223363Z remote: Counting objects:  20% (13/63)        
+2025-09-15T13:38:02.7224485Z remote: Counting objects:  22% (14/63)        
+2025-09-15T13:38:02.7225587Z remote: Counting objects:  23% (15/63)        
+2025-09-15T13:38:02.7226676Z remote: Counting objects:  25% (16/63)        
+2025-09-15T13:38:02.7227783Z remote: Counting objects:  26% (17/63)        
+2025-09-15T13:38:02.7229187Z remote: Counting objects:  28% (18/63)        
+2025-09-15T13:38:02.7231023Z remote: Counting objects:  30% (19/63)        
+2025-09-15T13:38:02.7232886Z remote: Counting objects:  31% (20/63)        
+2025-09-15T13:38:02.7234450Z remote: Counting objects:  33% (21/63)        
+2025-09-15T13:38:02.7235611Z remote: Counting objects:  34% (22/63)        
+2025-09-15T13:38:02.7236710Z remote: Counting objects:  36% (23/63)        
+2025-09-15T13:38:02.7237839Z remote: Counting objects:  38% (24/63)        
+2025-09-15T13:38:02.7239547Z remote: Counting objects:  39% (25/63)        
+2025-09-15T13:38:02.7240683Z remote: Counting objects:  41% (26/63)        
+2025-09-15T13:38:02.7241784Z remote: Counting objects:  42% (27/63)        
+2025-09-15T13:38:02.7242904Z remote: Counting objects:  44% (28/63)        
+2025-09-15T13:38:02.7244052Z remote: Counting objects:  46% (29/63)        
+2025-09-15T13:38:02.7245149Z remote: Counting objects:  47% (30/63)        
+2025-09-15T13:38:02.7246267Z remote: Counting objects:  49% (31/63)        
+2025-09-15T13:38:02.7247398Z remote: Counting objects:  50% (32/63)        
+2025-09-15T13:38:02.7248670Z remote: Counting objects:  52% (33/63)        
+2025-09-15T13:38:02.7249888Z remote: Counting objects:  53% (34/63)        
+2025-09-15T13:38:02.7251039Z remote: Counting objects:  55% (35/63)        
+2025-09-15T13:38:02.7252168Z remote: Counting objects:  57% (36/63)        
+2025-09-15T13:38:02.7253288Z remote: Counting objects:  58% (37/63)        
+2025-09-15T13:38:02.7254428Z remote: Counting objects:  60% (38/63)        
+2025-09-15T13:38:02.7255536Z remote: Counting objects:  61% (39/63)        
+2025-09-15T13:38:02.7256647Z remote: Counting objects:  63% (40/63)        
+2025-09-15T13:38:02.7257765Z remote: Counting objects:  65% (41/63)        
+2025-09-15T13:38:02.7259173Z remote: Counting objects:  66% (42/63)        
+2025-09-15T13:38:02.7260316Z remote: Counting objects:  68% (43/63)        
+2025-09-15T13:38:02.7261439Z remote: Counting objects:  69% (44/63)        
+2025-09-15T13:38:02.7262551Z remote: Counting objects:  71% (45/63)        
+2025-09-15T13:38:02.7263662Z remote: Counting objects:  73% (46/63)        
+2025-09-15T13:38:02.7264784Z remote: Counting objects:  74% (47/63)        
+2025-09-15T13:38:02.7265898Z remote: Counting objects:  76% (48/63)        
+2025-09-15T13:38:02.7267273Z remote: Counting objects:  77% (49/63)        
+2025-09-15T13:38:02.7268401Z remote: Counting objects:  79% (50/63)        
+2025-09-15T13:38:02.7269635Z remote: Counting objects:  80% (51/63)        
+2025-09-15T13:38:02.7270777Z remote: Counting objects:  82% (52/63)        
+2025-09-15T13:38:02.7271880Z remote: Counting objects:  84% (53/63)        
+2025-09-15T13:38:02.7273004Z remote: Counting objects:  85% (54/63)        
+2025-09-15T13:38:02.7274118Z remote: Counting objects:  87% (55/63)        
+2025-09-15T13:38:02.7275246Z remote: Counting objects:  88% (56/63)        
+2025-09-15T13:38:02.7276409Z remote: Counting objects:  90% (57/63)        
+2025-09-15T13:38:02.7277517Z remote: Counting objects:  92% (58/63)        
+2025-09-15T13:38:02.7278761Z remote: Counting objects:  93% (59/63)        
+2025-09-15T13:38:02.7279885Z remote: Counting objects:  95% (60/63)        
+2025-09-15T13:38:02.7281008Z remote: Counting objects:  96% (61/63)        
+2025-09-15T13:38:02.7282143Z remote: Counting objects:  98% (62/63)        
+2025-09-15T13:38:02.7283273Z remote: Counting objects: 100% (63/63)        
+2025-09-15T13:38:02.7284448Z remote: Counting objects: 100% (63/63), done.        
+2025-09-15T13:38:02.7285686Z remote: Compressing objects:   1% (1/51)        
+2025-09-15T13:38:02.7286856Z remote: Compressing objects:   3% (2/51)        
+2025-09-15T13:38:02.7288026Z remote: Compressing objects:   5% (3/51)        
+2025-09-15T13:38:02.7289322Z remote: Compressing objects:   7% (4/51)        
+2025-09-15T13:38:02.7290481Z remote: Compressing objects:   9% (5/51)        
+2025-09-15T13:38:02.7291640Z remote: Compressing objects:  11% (6/51)        
+2025-09-15T13:38:02.7292796Z remote: Compressing objects:  13% (7/51)        
+2025-09-15T13:38:02.7293954Z remote: Compressing objects:  15% (8/51)        
+2025-09-15T13:38:02.7295089Z remote: Compressing objects:  17% (9/51)        
+2025-09-15T13:38:02.7296243Z remote: Compressing objects:  19% (10/51)        
+2025-09-15T13:38:02.7297412Z remote: Compressing objects:  21% (11/51)        
+2025-09-15T13:38:02.7298715Z remote: Compressing objects:  23% (12/51)        
+2025-09-15T13:38:02.7300022Z remote: Compressing objects:  25% (13/51)        
+2025-09-15T13:38:02.7301379Z remote: Compressing objects:  27% (14/51)        
+2025-09-15T13:38:02.7302538Z remote: Compressing objects:  29% (15/51)        
+2025-09-15T13:38:02.7303696Z remote: Compressing objects:  31% (16/51)        
+2025-09-15T13:38:02.7304863Z remote: Compressing objects:  33% (17/51)        
+2025-09-15T13:38:02.7306020Z remote: Compressing objects:  35% (18/51)        
+2025-09-15T13:38:02.7307176Z remote: Compressing objects:  37% (19/51)        
+2025-09-15T13:38:02.7308325Z remote: Compressing objects:  39% (20/51)        
+2025-09-15T13:38:02.7309617Z remote: Compressing objects:  41% (21/51)        
+2025-09-15T13:38:02.7310767Z remote: Compressing objects:  43% (22/51)        
+2025-09-15T13:38:02.7311909Z remote: Compressing objects:  45% (23/51)        
+2025-09-15T13:38:02.7313057Z remote: Compressing objects:  47% (24/51)        
+2025-09-15T13:38:02.7314215Z remote: Compressing objects:  49% (25/51)        
+2025-09-15T13:38:02.7315370Z remote: Compressing objects:  50% (26/51)        
+2025-09-15T13:38:02.7316540Z remote: Compressing objects:  52% (27/51)        
+2025-09-15T13:38:02.7317686Z remote: Compressing objects:  54% (28/51)        
+2025-09-15T13:38:02.7318940Z remote: Compressing objects:  56% (29/51)        
+2025-09-15T13:38:02.7320081Z remote: Compressing objects:  58% (30/51)        
+2025-09-15T13:38:02.7321221Z remote: Compressing objects:  60% (31/51)        
+2025-09-15T13:38:02.7322365Z remote: Compressing objects:  62% (32/51)        
+2025-09-15T13:38:02.7323525Z remote: Compressing objects:  64% (33/51)        
+2025-09-15T13:38:02.7324673Z remote: Compressing objects:  66% (34/51)        
+2025-09-15T13:38:02.7325823Z remote: Compressing objects:  68% (35/51)        
+2025-09-15T13:38:02.7326970Z remote: Compressing objects:  70% (36/51)        
+2025-09-15T13:38:02.7328257Z remote: Compressing objects:  72% (37/51)        
+2025-09-15T13:38:02.7329525Z remote: Compressing objects:  74% (38/51)        
+2025-09-15T13:38:02.7330657Z remote: Compressing objects:  76% (39/51)        
+2025-09-15T13:38:02.7331813Z remote: Compressing objects:  78% (40/51)        
+2025-09-15T13:38:02.7332943Z remote: Compressing objects:  80% (41/51)        
+2025-09-15T13:38:02.7334096Z remote: Compressing objects:  82% (42/51)        
+2025-09-15T13:38:02.7335238Z remote: Compressing objects:  84% (43/51)        
+2025-09-15T13:38:02.7336378Z remote: Compressing objects:  86% (44/51)        
+2025-09-15T13:38:02.7337518Z remote: Compressing objects:  88% (45/51)        
+2025-09-15T13:38:02.7338906Z remote: Compressing objects:  90% (46/51)        
+2025-09-15T13:38:02.7340102Z remote: Compressing objects:  92% (47/51)        
+2025-09-15T13:38:02.7341263Z remote: Compressing objects:  94% (48/51)        
+2025-09-15T13:38:02.7342409Z remote: Compressing objects:  96% (49/51)        
+2025-09-15T13:38:02.7343596Z remote: Compressing objects:  98% (50/51)        
+2025-09-15T13:38:02.7344761Z remote: Compressing objects: 100% (51/51)        
+2025-09-15T13:38:02.7345980Z remote: Compressing objects: 100% (51/51), done.        
+2025-09-15T13:38:02.7681524Z remote: Total 63 (delta 5), reused 48 (delta 1), pack-reused 0 (from 0)        
+2025-09-15T13:38:02.7775461Z From https://github.com/cuongchung84/shopware-social-marketing
+2025-09-15T13:38:02.7778135Z  * [new ref]         d891a6ae2c83512d197ea3324dd3f5a899dcc058 -> origin/main
+2025-09-15T13:38:02.7809479Z ##[endgroup]
+2025-09-15T13:38:02.7811781Z ##[group]Determining the checkout info
+2025-09-15T13:38:02.7814135Z ##[endgroup]
+2025-09-15T13:38:02.7816153Z ##[group]Checking out the ref
+2025-09-15T13:38:02.7818452Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-09-15T13:38:02.7893104Z Switched to a new branch 'main'
+2025-09-15T13:38:02.7896078Z branch 'main' set up to track 'origin/main'.
+2025-09-15T13:38:02.7904081Z ##[endgroup]
+2025-09-15T13:38:02.7935986Z [command]/usr/bin/git log -1 --format='%H'
+2025-09-15T13:38:02.7956741Z 'd891a6ae2c83512d197ea3324dd3f5a899dcc058'
