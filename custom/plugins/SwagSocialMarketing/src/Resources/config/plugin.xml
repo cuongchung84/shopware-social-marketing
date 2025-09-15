@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/6.7.0.0/src/Core/Framework/Plugin/Schema/plugin-1.0.xsd">
+    <base-plugin-class>Swag\SocialMarketing\SwagSocialMarketing</base-plugin-class>
+    <label>Social Marketing</label>
+    <version>1.0.0</version>
+    <description>Social Marketing plugin for Shopware 6</description>
+    <author>openhands-dev</author>
+    <compatibility minVersion="6.7.0.0" />
+</plugin>
