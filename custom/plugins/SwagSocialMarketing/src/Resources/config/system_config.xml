@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/6.7.0.0/src/Core/System/SystemConfig/Schema/config-1.0.xsd">
+    <card>
+        <title>Facebook Configuration</title>
+        <input-field>
+            <name>facebookAppId</name>
+            <label>App ID</label>
+            <help-text>Enter your Facebook App ID.</help-text>
+        </input-field>
+        <input-field>
+            <name>facebookAppSecret</name>
+            <label>App Secret</label>
+            <help-text>Enter your Facebook App Secret.</help-text>
+        </input-field>
+        <input-field>
+            <name>facebookAccessToken</name>
+            <label>Access Token</label>
+            <help-text>Enter your Facebook Access Token.</help-text>
+        </input-field>
+    </card>
+    <card>
+        <title>Instagram Configuration</title>
+        <input-field>
+            <name>instagramAppId</name>
+            <label>App ID</label>
+            <help-text>Enter your Instagram App ID.</help-text>
+        </input-field>
+        <input-field>
+            <name>instagramAppSecret</name>
+            <label>App Secret</label>
+            <help-text>Enter your Instagram App Secret.</help-text>
+        </input-field>
+        <input-field>
+            <name>instagramAccessToken</name>
+            <label>Access Token</label>
+            <help-text>Enter your Instagram Access Token.</help-text>
+        </input-field>
+    </card>
+    <card>
+        <title>TikTok Configuration</title>
+        <input-field>
+            <name>tiktokAppKey</name>
+            <label>App Key</label>
+            <help-text>Enter your TikTok App Key.</help-text>
+        </input-field>
+        <input-field>
+            <name>tiktokAppSecret</name>
+            <label>App Secret</label>
+            <help-text>Enter your TikTok App Secret.</help-text>
+        </input-field>
+        <input-field>
+            <name>tiktokAccessToken</name>
+            <label>Access Token</label>
+            <help-text>Enter your TikTok Access Token.</help-text>
+        </input-field>
+    </card>
+</config>

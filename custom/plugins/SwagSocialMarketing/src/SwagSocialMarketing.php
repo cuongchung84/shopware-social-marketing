@@ -6,4 +6,5 @@ use Shopware\Core\Framework\Plugin;
 
 class SwagSocialMarketing extends Plugin
 {
+    public const CONFIG_DOMAIN = 'SwagSocialMarketing.config';
 }
