@@ -20,13 +20,14 @@ jobs:
 
             - name: Install Dependencies
               run: composer install -vvv
-
-            - name: Install Plugin Dependencies
-              run: composer install -vvv
               working-directory: custom/plugins/SwagSocialMarketing
 
             - name: Check Coding Standards
               run: vendor/bin/phpcs --standard=PSR12 src/
+              working-directory: custom/plugins/SwagSocialMarketing
+
+            - name: Run Tests
+              run: vendor/bin/phpunit --coverage-text
               working-directory: custom/plugins/SwagSocialMarketing
 
 
