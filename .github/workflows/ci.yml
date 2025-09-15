@@ -27,6 +27,7 @@ jobs:
 
             - name: Check Coding Standards
               run: vendor/bin/phpcs --standard=PSR12 src/
+              working-directory: custom/plugins/SwagSocialMarketing
 
             - name: Run Tests
               run: vendor/bin/phpunit --coverage-text
