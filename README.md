@@ -1,5 +1,8 @@
 # Shopware Social Marketing Plugin
 
+[![CI](https://github.com/your-username/shopware-social-marketing/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/shopware-social-marketing/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/your-username/shopware-social-marketing/badge.svg?branch=main)](https://coveralls.io/github/your-username/shopware-social-marketing?branch=main)
+
 SwagSocialMarketing is a Shopware 6.7 plugin that connects to Facebook, Instagram, and TikTok to post products for social marketing.
 
 ## Overview
