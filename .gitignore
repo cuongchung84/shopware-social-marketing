@@ -1,0 +1,16 @@
+404: Not Found
+# Shopware
+/config/jwt
+/files
+/var/log
+/public/sitemap
+/public/media
+/public/thumbnail
+/public/theme
+/public/bundles
+/public/css
+/public/js
+/public/assets
+/vendor
+/composer.lock
+

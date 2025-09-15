@@ -1,0 +1,1 @@
+SwagSocialMarketing is a Shopware 6.7 plugin that connects to Facebook, Instagram, and TikTok to post products for social marketing.
