@@ -1,0 +1,22 @@
+{% block swag_social_marketing_log_list %}
+    <sw-page class="swag-social-marketing-log-list">
+        <template #smart-bar-header>
+            <h2>{{ $tc('swag-social-marketing-log.general.mainMenuItemGeneral') }}</h2>
+        </template>
+
+        <template #content>
+            <sw-card :isLoading="isLoading">
+                <sw-entity-listing
+                    v-if="logs"
+                    :items="logs"
+                    :repository="logRepository"
+                    :columns="getColumns()"
+                    :showSelection="false"
+                    :fullPage="false"
+                    @page-change="onPageChange"
+                    @column-sort="onSortColumn">
+                </sw-entity-listing>
+            </sw-card>
+        </template>
+    </sw-page>
+{% endblock %}
