@@ -21,13 +21,16 @@ class SocialPostService
     private LoggerInterface $logger;
     private SystemConfigService $systemConfigService;
 
+    private EntityRepository $logRepository;
+
     public function __construct(
         EntityRepository $productRepository,
         FacebookClient $facebookClient,
         InstagramClient $instagramClient,
         TikTokClient $tikTokClient,
         LoggerInterface $logger,
-        SystemConfigService $systemConfigService
+        SystemConfigService $systemConfigService,
+        EntityRepository $logRepository
     ) {
         $this->productRepository = $productRepository;
         $this->facebookClient = $facebookClient;
@@ -35,6 +38,7 @@ class SocialPostService
         $this->tikTokClient = $tikTokClient;
         $this->logger = $logger;
         $this->systemConfigService = $systemConfigService;
+        $this->logRepository = $logRepository;
     }
 
     public function postProduct(string $productId): void
@@ -50,18 +54,32 @@ class SocialPostService
 
         if ($this->isFacebookEnabled()) {
             $this->logger->info('Posting product to Facebook.', ['product_id' => $productId]);
-            $this->facebookClient->postProduct($productData);
+            $success = $this->facebookClient->postProduct($productData);
+            $this->logResult($productId, 'facebook', $success);
         }
 
         if ($this->isInstagramEnabled()) {
             $this->logger->info('Posting product to Instagram.', ['product_id' => $productId]);
-            $this->instagramClient->postProduct($productData);
+            $success = $this->instagramClient->postProduct($productData);
+            $this->logResult($productId, 'instagram', $success);
         }
 
         if ($this->isTikTokEnabled()) {
             $this->logger->info('Posting product to TikTok.', ['product_id' => $productId]);
-            $this->tikTokClient->postProduct($productData);
+            $success = $this->tikTokClient->postProduct($productData);
+            $this->logResult($productId, 'tiktok', $success);
         }
+    }
+
+    private function logResult(string $productId, string $network, bool $success): void
+    {
+        $this->logRepository->create([
+            [
+                'productId' => $productId,
+                'network' => $network,
+                'status' => $success ? 'success' : 'failure',
+            ],
+        ], Context::createDefaultContext());
     }
 
     private function fetchProduct(string $productId): ?ProductEntity

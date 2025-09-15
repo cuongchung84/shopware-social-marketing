@@ -28,12 +28,16 @@
             <argument type="service" id="Swag\SocialMarketing\Service\Clients\TikTokClient"/>
             <argument type="service" id="monolog.logger.swag_social_marketing"/>
             <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="swag_social_marketing_log.repository"/>
         </service>
         <service id="Swag\SocialMarketing\ScheduledTask\SocialPostTaskHandler">
             <argument type="service" id="Swag\SocialMarketing\Service\SocialPostService"/>
             <argument type="service" id="product.repository"/>
             <argument type="service" id="monolog.logger.swag_social_marketing"/>
             <tag name="messenger.message_handler"/>
+        </service>
+        <service id="Swag\SocialMarketing\Core\Content\SocialMarketingLog\SocialMarketingLogDefinition">
+            <tag name="shopware.entity.definition" entity="swag_social_marketing_log"/>
         </service>
     </services>
 </container>
