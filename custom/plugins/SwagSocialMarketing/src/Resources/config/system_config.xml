@@ -55,4 +55,13 @@
             <help-text>Enter your TikTok Access Token.</help-text>
         </input-field>
     </card>
+    <card>
+        <title>Schedule</title>
+        <input-field>
+            <name>post_schedule_interval</name>
+            <label>Post Schedule Interval (minutes)</label>
+            <defaultValue>360</defaultValue>
+            <helpText>Set the interval in minutes for the scheduled post task.</helpText>
+        </input-field>
+    </card>
 </config>
