@@ -19,11 +19,7 @@ jobs:
                   php-version: '8.2'
 
             - name: Install Dependencies
-              run: composer install -vvv --dev
-              working-directory: custom/plugins/SwagSocialMarketing
-
-            - name: List vendor/bin
-              run: ls -l vendor/bin
+              run: composer install -vvv
               working-directory: custom/plugins/SwagSocialMarketing
 
             - name: Check Coding Standards
