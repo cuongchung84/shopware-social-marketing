@@ -12,6 +12,13 @@
     "require": {
         "shopware/core": "6.7.*"
     },
+    "extra": {
+        "shopware-plugin-class": "Swag\\SocialMarketing\\SwagSocialMarketing",
+        "label": {
+            "de-DE": "Social Marketing",
+            "en-GB": "Social Marketing"
+        }
+    },
     "autoload": {
         "psr-4": {
             "Swag\\SocialMarketing\\": "src/"
