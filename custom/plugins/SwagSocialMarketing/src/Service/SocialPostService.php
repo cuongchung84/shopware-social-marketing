@@ -49,14 +49,17 @@ class SocialPostService
         $productData = $this->buildProductData($product);
 
         if ($this->isFacebookEnabled()) {
+            $this->logger->info('Posting product to Facebook.', ['product_id' => $productId]);
             $this->facebookClient->postProduct($productData);
         }
 
         if ($this->isInstagramEnabled()) {
+            $this->logger->info('Posting product to Instagram.', ['product_id' => $productId]);
             $this->instagramClient->postProduct($productData);
         }
 
         if ($this->isTikTokEnabled()) {
+            $this->logger->info('Posting product to TikTok.', ['product_id' => $productId]);
             $this->tikTokClient->postProduct($productData);
         }
     }

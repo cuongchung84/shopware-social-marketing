@@ -46,11 +46,12 @@ class TikTokClient
             ]);
 
             if ($response->getStatusCode() === 200) {
-                $this->logger->info('Product posted to TikTok successfully.');
+                $this->logger->info('Product posted to TikTok successfully.', ['product_id' => $productData['id']]);
                 return true;
             }
 
             $this->logger->error('Failed to post product to TikTok.', [
+                'product_id' => $productData['id'],
                 'status_code' => $response->getStatusCode(),
                 'response' => $response->getContent(false),
             ]);
@@ -58,6 +59,7 @@ class TikTokClient
             return false;
         } catch (\Exception $e) {
             $this->logger->error('An error occurred while posting product to TikTok.', [
+                'product_id' => $productData['id'],
                 'exception' => $e,
             ]);
 

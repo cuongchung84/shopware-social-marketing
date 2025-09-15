@@ -1,0 +1,10 @@
+monolog:
+    channels:
+        - swag_social_marketing
+
+    handlers:
+        swag_social_marketing:
+            type: rotating_file
+            path: "%kernel.logs_dir%/swag_social_marketing.log"
+            level: debug
+            channels: ["swag_social_marketing"]

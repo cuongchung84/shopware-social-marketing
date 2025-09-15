@@ -9,30 +9,30 @@
         <service id="Swag\SocialMarketing\Service\Clients\FacebookClient" public="true">
             <argument type="service" id="Swag\SocialMarketing\Service\ConfigService"/>
             <argument type="service" id="http_client"/>
-            <argument type="service" id="logger"/>
+            <argument type="service" id="monolog.logger.swag_social_marketing"/>
         </service>
         <service id="Swag\SocialMarketing\Service\Clients\InstagramClient" public="true">
             <argument type="service" id="Swag\SocialMarketing\Service\ConfigService"/>
             <argument type="service" id="http_client"/>
-            <argument type="service" id="logger"/>
+            <argument type="service" id="monolog.logger.swag_social_marketing"/>
         </service>
         <service id="Swag\SocialMarketing\Service\Clients\TikTokClient" public="true">
             <argument type="service" id="Swag\SocialMarketing\Service\ConfigService"/>
             <argument type="service" id="http_client"/>
-            <argument type="service" id="logger"/>
+            <argument type="service" id="monolog.logger.swag_social_marketing"/>
         </service>
         <service id="Swag\SocialMarketing\Service\SocialPostService" public="true">
             <argument type="service" id="product.repository"/>
             <argument type="service" id="Swag\SocialMarketing\Service\Clients\FacebookClient"/>
             <argument type="service" id="Swag\SocialMarketing\Service\Clients\InstagramClient"/>
             <argument type="service" id="Swag\SocialMarketing\Service\Clients\TikTokClient"/>
-            <argument type="service" id="logger"/>
+            <argument type="service" id="monolog.logger.swag_social_marketing"/>
             <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
         </service>
         <service id="Swag\SocialMarketing\ScheduledTask\SocialPostTaskHandler">
             <argument type="service" id="Swag\SocialMarketing\Service\SocialPostService"/>
             <argument type="service" id="product.repository"/>
-            <argument type="service" id="logger"/>
+            <argument type="service" id="monolog.logger.swag_social_marketing"/>
             <tag name="messenger.message_handler"/>
         </service>
     </services>

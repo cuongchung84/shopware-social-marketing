@@ -46,11 +46,12 @@ class FacebookClient
             ]);
 
             if ($response->getStatusCode() === 200) {
-                $this->logger->info('Product posted to Facebook successfully.');
+                $this->logger->info('Product posted to Facebook successfully.', ['product_id' => $productData['id']]);
                 return true;
             }
 
             $this->logger->error('Failed to post product to Facebook.', [
+                'product_id' => $productData['id'],
                 'status_code' => $response->getStatusCode(),
                 'response' => $response->getContent(false),
             ]);
@@ -58,6 +59,7 @@ class FacebookClient
             return false;
         } catch (\Exception $e) {
             $this->logger->error('An error occurred while posting product to Facebook.', [
+                'product_id' => $productData['id'],
                 'exception' => $e,
             ]);
 

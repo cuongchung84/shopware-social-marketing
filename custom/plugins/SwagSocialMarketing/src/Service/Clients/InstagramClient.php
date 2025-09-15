@@ -45,11 +45,12 @@ class InstagramClient
             ]);
 
             if ($response->getStatusCode() === 200) {
-                $this->logger->info('Product posted to Instagram successfully.');
+                $this->logger->info('Product posted to Instagram successfully.', ['product_id' => $productData['id']]);
                 return true;
             }
 
             $this->logger->error('Failed to post product to Instagram.', [
+                'product_id' => $productData['id'],
                 'status_code' => $response->getStatusCode(),
                 'response' => $response->getContent(false),
             ]);
@@ -57,6 +58,7 @@ class InstagramClient
             return false;
         } catch (\Exception $e) {
             $this->logger->error('An error occurred while posting product to Instagram.', [
+                'product_id' => $productData['id'],
                 'exception' => $e,
             ]);
 
