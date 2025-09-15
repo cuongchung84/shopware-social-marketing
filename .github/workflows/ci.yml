@@ -18,8 +18,8 @@ jobs:
               with:
                   php-version: '8.2'
 
-            - name: List files
-              run: ls -l
+            - name: Cat composer.json
+              run: cat composer.json
               working-directory: custom/plugins/SwagSocialMarketing
 
             - name: Install Dependencies
