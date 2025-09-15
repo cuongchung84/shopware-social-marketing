@@ -16,5 +16,10 @@
             <argument type="service" id="http_client"/>
             <argument type="service" id="logger"/>
         </service>
+        <service id="Swag\SocialMarketing\Service\Clients\TikTokClient" public="true">
+            <argument type="service" id="Swag\SocialMarketing\Service\ConfigService"/>
+            <argument type="service" id="http_client"/>
+            <argument type="service" id="logger"/>
+        </service>
     </services>
 </container>
